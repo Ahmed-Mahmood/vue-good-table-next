@@ -249,9 +249,9 @@
                       :formattedRow="formattedRow(row)"
                       :index="index"
                     >
-                      <span v-if="!column.html">
-                        {{ collectFormatted(row, column) }}
+                      <span v-if="!column.html" v-html="collectFormatted(row, column)">
                       </span>
+                      //{{ collectFormatted(row, column) }}
                       <span v-else v-html="collect(row, column.field)">
                       </span>
                     </slot>
